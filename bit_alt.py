@@ -96,6 +96,8 @@ class main():
             current_time = time.time()
             if time.time() - current_time > 0.1:
                 run_miners()
+                print('Current Length of Ledger: ' + str(len(self.ledger)))
+                print('Last Correct Information ' + str(len(self.ledger)))
                 current_time = time.time()
             else:
                 pass
