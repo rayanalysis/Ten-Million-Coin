@@ -63,6 +63,7 @@ class main():
                 pass
             
             current_guess_var = random.randint(1, self.random_number_max)
+            print('Miner 1 Current Guess: ' + current_guess_var)
             
             if current_guess_var == guess_this_now:
                 winning_information = [unique_miner_id, var_1, guess_this_now]
@@ -83,6 +84,7 @@ class main():
                 pass
             
             current_guess_var = random.randint(1, self.random_number_max)
+            print('Miner 2 Current Guess: ' + current_guess_var)
             
             if current_guess_var == guess_this_now:
                 winning_information = [unique_miner_id, var_1, guess_this_now]
