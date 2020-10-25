@@ -80,7 +80,7 @@ class main():
                 
         while len(self.ledger) < self.max_coin_length:
             current_time = 0
-            if current_time = 0:
+            if current_time == 0:
                 current_time = time.time()
 
             if time.time() - current_time > self.time_amount:
