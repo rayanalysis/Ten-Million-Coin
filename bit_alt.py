@@ -57,7 +57,7 @@ class main():
             var_1 = get_ledger_current_size(self.ledger)
             guess_this_now = self.secret_registry[var_1]
             current_guess_var = random.randint(1, self.random_number_max)
-            print('Miner 1 Current Guess: ' + current_guess_var)
+            print('Miner 1 Current Guess: ' + str(current_guess_var))
             
             if current_guess_var == guess_this_now:
                 winning_information = [unique_miner_id, var_1, guess_this_now]
@@ -72,7 +72,7 @@ class main():
             var_1 = get_ledger_current_size(self.ledger)
             guess_this_now = self.secret_registry[var_1]      
             current_guess_var = random.randint(1, self.random_number_max)
-            print('Miner 2 Current Guess: ' + current_guess_var)
+            print('Miner 2 Current Guess: ' + str(current_guess_var))
             
             if current_guess_var == guess_this_now:
                 winning_information = [unique_miner_id, var_1, guess_this_now]
