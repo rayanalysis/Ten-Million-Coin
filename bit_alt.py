@@ -12,7 +12,7 @@
 #
 # project details
 # a time-bound distributed currency
-# that replace blockchain exponential energy usage
+# that replace chain exponential energy usage
 # with a finite energy distributed ledger
 # made up of a randomly generated set of values
 # in a range of natural numbers
