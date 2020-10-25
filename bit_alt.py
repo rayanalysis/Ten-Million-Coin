@@ -55,13 +55,7 @@ class main():
             # get a unique miner ID
             unique_miner_id = 29304234
             var_1 = get_ledger_current_size(self.ledger)
-            guess_this_now = 0
-            
-            try: 
-                guess_this_now = self.secret_registry[var_1]
-            except:
-                pass
-            
+            guess_this_now = self.secret_registry[var_1]
             current_guess_var = random.randint(1, self.random_number_max)
             print('Miner 1 Current Guess: ' + current_guess_var)
             
@@ -76,13 +70,7 @@ class main():
             # get a unique miner ID
             unique_miner_id = 29304234
             var_1 = get_ledger_current_size(self.ledger)
-            guess_this_now = 0
-            
-            try: 
-                guess_this_now = self.secret_registry[var_1]
-            except:
-                pass
-            
+            guess_this_now = self.secret_registry[var_1]      
             current_guess_var = random.randint(1, self.random_number_max)
             print('Miner 2 Current Guess: ' + current_guess_var)
             
@@ -91,13 +79,10 @@ class main():
                 self.ledger.append(winning_information)
                 
         while len(self.ledger) < self.max_coin_length:
-            def run_miners():
-                gen_miner_1()
-                gen_miner_2()
-            
             current_time = time.time()
             if time.time() - current_time > self.time_amount:
-                run_miners()
+                gen_miner_1()
+                gen_miner_2()
                 print('Current Length of Ledger: ' + str(len(self.ledger)))
                 print('Last Correct Information ' + str(len(self.ledger)))
                 current_time = time.time()
