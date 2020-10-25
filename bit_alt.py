@@ -27,14 +27,11 @@
 # correctly in a normalized time range across wallets
 
 import random
+import time
 
 class main():
     def __init__(self):
         # 10_25_20 the following is a prototype for a much larger system
-        
-        ledger = int(310783912)
-        print(ledger)
-
         self.secret_registry = []
         self.max_coin_length = 10000000  # ten million
         self.random_number_max = 10000000  # ten million (to save memory)
@@ -47,5 +44,22 @@ class main():
         self.party = []
         self.value = []
         self.ledger = []
+        
+        def get_ledger_current_size(input_ledger):
+            return len(self.ledger)
+        
+        # spawn a number of simulated Ten Million Coin "miners"
+        def gen_miners():
+            # take the current length of the distributed ledger 
+            # as input on the secret registry to determine the
+            # current target value of the process
+            var_1 = get_ledger_current_size(self.ledger)
+            guess_this_now = 0
+            try: 
+                guess_this_now = self.secret_registry[var_1]
+            except:
+                pass
+            
+            
 
 main()
