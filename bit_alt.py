@@ -35,7 +35,7 @@ class main():
         self.secret_registry = []
         self.max_coin_length = 10000000  # ten million
         self.random_number_max = 10000000  # ten million (to save memory)
-        self.time_amount = 100  # 100 millisecond compute slice
+        self.time_amount = 0.1  # 100 millisecond compute slice
         # ten million * ten million requires ~500 megabytes to store
         # these values fully express "Ten Million Coin"
 
@@ -96,7 +96,7 @@ class main():
                 gen_miner_2()
             
             current_time = time.time()
-            if time.time() - current_time > 0.1:
+            if time.time() - current_time > self.time_amount:
                 run_miners()
                 print('Current Length of Ledger: ' + str(len(self.ledger)))
                 print('Last Correct Information ' + str(len(self.ledger)))
