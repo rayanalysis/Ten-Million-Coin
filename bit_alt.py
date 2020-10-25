@@ -79,17 +79,10 @@ class main():
                 self.ledger.append(winning_information)
                 
         while len(self.ledger) < self.max_coin_length:
-            current_time = 0
-            if current_time == 0:
-                current_time = time.time()
-
-            if time.time() - current_time > self.time_amount:
-                print(current_time)
-                gen_miner_1()
-                gen_miner_2()
-                print('Current Length of Ledger: ' + str(len(self.ledger)))
-                print('Last Correct Information ' + str(len(self.ledger)))
-                current_time = time.time()
-            else:
-                pass
+            time.sleep(0.1)
+            print(current_time)
+            gen_miner_1()
+            gen_miner_2()
+            print('Current Length of Ledger: ' + str(len(self.ledger)))
+            print('Last Correct Information ' + str(len(self.ledger)))
 main()
