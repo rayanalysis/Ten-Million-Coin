@@ -79,7 +79,7 @@ class main():
                 self.ledger.append(winning_information)
                 
         while len(self.ledger) < self.max_coin_length:
-            time.sleep(0.1)
+            time.sleep(self.time_amount)
             print(time.time())
             gen_miner_1()
             gen_miner_2()
