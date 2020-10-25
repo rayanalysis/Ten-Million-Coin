@@ -87,7 +87,7 @@ class main():
                 winning_information = [unique_miner_id, var_1, guess_this_now]
                 self.ledger.append(winning_information)
                 
-       while len(self.ledger) < self.max_coin_length:
-           gen_miner_1()
-           gen_miner_2()
+        while len(self.ledger) < self.max_coin_length:
+            gen_miner_1()
+            gen_miner_2()
 main()
