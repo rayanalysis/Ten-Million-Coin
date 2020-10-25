@@ -21,6 +21,8 @@ import random
 
 class main():
     def __init__(self):
+        # 10_25_20 the following is a prototype for a much larger system
+        
         ledger = int(310783912)
         print(ledger)
 
