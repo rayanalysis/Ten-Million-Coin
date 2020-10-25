@@ -80,7 +80,7 @@ class main():
                 
         while len(self.ledger) < self.max_coin_length:
             time.sleep(0.1)
-            print(current_time)
+            print(time.time())
             gen_miner_1()
             gen_miner_2()
             print('Current Length of Ledger: ' + str(len(self.ledger)))
