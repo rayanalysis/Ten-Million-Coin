@@ -41,25 +41,53 @@ class main():
         for x in range(0, self.max_coin_length):
             self.secret_registry.append(random.randint(1, self.random_number_max))
 
-        self.party = []
-        self.value = []
         self.ledger = []
         
         def get_ledger_current_size(input_ledger):
             return len(self.ledger)
         
         # spawn a number of simulated Ten Million Coin "miners"
-        def gen_miners():
+        def gen_miner_1():
             # take the current length of the distributed ledger 
             # as input on the secret registry to determine the
             # current target value of the process
+            # get a unique miner ID
+            unique_miner_id = 29304234
             var_1 = get_ledger_current_size(self.ledger)
             guess_this_now = 0
+            
             try: 
                 guess_this_now = self.secret_registry[var_1]
             except:
                 pass
             
+            current_guess_var = random.randint(1, self.random_number_max)
             
-
+            if current_guess_var == guess_this_now:
+                winning_information = [unique_miner_id, var_1, guess_this_now]
+                self.ledger.append(winning_information)
+                
+        def gen_miner_2():
+            # take the current length of the distributed ledger 
+            # as input on the secret registry to determine the
+            # current target value of the process
+            # get a unique miner ID
+            unique_miner_id = 29304234
+            var_1 = get_ledger_current_size(self.ledger)
+            guess_this_now = 0
+            
+            try: 
+                guess_this_now = self.secret_registry[var_1]
+            except:
+                pass
+            
+            current_guess_var = random.randint(1, self.random_number_max)
+            
+            if current_guess_var == guess_this_now:
+                winning_information = [unique_miner_id, var_1, guess_this_now]
+                self.ledger.append(winning_information)
+                
+       while len(self.ledger) < self.max_coin_length:
+           gen_miner_1()
+           gen_miner_2()
 main()
