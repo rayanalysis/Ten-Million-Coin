@@ -35,7 +35,7 @@ class main():
         self.secret_registry = []
         self.max_coin_length = 10000000  # ten million
         self.random_number_max = 10000000  # ten million (to save memory)
-        self.time_amount = 0.1  # 100 millisecond compute slice
+        self.time_amount = 0.001  # 1 millisecond compute slice
         # ten million * ten million requires ~500 megabytes to store
         # these values fully express "Ten Million Coin"
 
@@ -68,7 +68,7 @@ class main():
             # as input on the secret registry to determine the
             # current target value of the process
             # get a unique miner ID
-            unique_miner_id = 29304234
+            unique_miner_id = 12954231
             var_1 = get_ledger_current_size(self.ledger)
             guess_this_now = self.secret_registry[var_1]      
             current_guess_var = random.randint(1, self.random_number_max)
