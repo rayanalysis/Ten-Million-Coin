@@ -34,7 +34,7 @@ class main():
         # 10_25_20 the following is a prototype for a much larger system
         self.secret_registry = []
         self.max_coin_length = 10000000  # ten million
-        self.random_number_max = 10000000  # ten million (to save memory)
+        self.random_number_max = 10000000  # ten million
         self.time_amount = 0.001  # 1 millisecond compute slice
         # ten million * ten million requires ~500 megabytes to store
         # these values fully express "Ten Million Coin"
