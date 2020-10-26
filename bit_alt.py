@@ -84,5 +84,5 @@ class main():
             gen_miner_1()
             gen_miner_2()
             print('Current Length of Ledger: ' + str(len(self.ledger)))
-            print('Last Correct Information ' + str(self.ledger[len(self.ledger)]))
+            print('Current Distributed Ledger: ' + str(self.ledger))
 main()
