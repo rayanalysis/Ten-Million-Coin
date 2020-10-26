@@ -50,8 +50,11 @@ class main():
             print('Miner 1 Current Guess: ' + str(current_guess_var))
             
             if current_guess_var == guess_this_now:
-                winning_information = [unique_miner_id, var_1, guess_this_now]
+                winning_information = [time.time(), unique_miner_id, var_1, guess_this_now]
                 self.ledger.append(winning_information)
+                file_1 = open('ten_million_ledger.txt', 'w')
+                file_1.write(str(self.ledger))
+                file_1.close()
                 
         def gen_miner_2():
             # take the current length of the distributed ledger 
@@ -65,8 +68,11 @@ class main():
             print('Miner 2 Current Guess: ' + str(current_guess_var))
             
             if current_guess_var == guess_this_now:
-                winning_information = [unique_miner_id, var_1, guess_this_now]
+                winning_information = [time.time(), unique_miner_id, var_1, guess_this_now]
                 self.ledger.append(winning_information)
+                file_1 = open('ten_million_ledger.txt', 'w')
+                file_1.write(str(self.ledger))
+                file_1.close()
                 
         while len(self.ledger) < self.max_coin_length:
             time.sleep(self.time_amount)
@@ -75,4 +81,5 @@ class main():
             gen_miner_2()
             print('Current Length of Ledger: ' + str(len(self.ledger)))
             print('Current Distributed Ledger: ' + str(self.ledger))
+
 main()
